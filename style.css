@@ -1,0 +1,496 @@
+/* First screen */
+
+html {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+body {
+  font-family: "Monoton", cursive;
+
+  text-transform: uppercase;
+}
+
+.credit {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+}
+
+.credit p {
+  color: #000;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  margin: auto;
+  text-transform: capitalize;
+  padding: 5px;
+  font-size: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.lefthalf {
+  background: #fea02f;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
+}
+
+.yes {
+  position: relative;
+  float: left;
+  margin-left: 3%;
+  font-size: 42px;
+  font-size: 20vw;
+  color: white;
+}
+
+.no {
+  position: relative;
+  float: right;
+  margin-right: 7%;
+  font-size: 42px;
+  font-size: 20vw;
+  color: white;
+}
+
+#circle {
+  position: absolute;
+  border: 24px solid #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: none;
+  color: #fff;
+}
+
+#c-text {
+  position: relative;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  bottom: 48px;
+  right: 33px;
+  font-size: 28px;
+  -ms-transform: rotate(-30deg); /* IE 9 */
+  -webkit-transform: rotate(-30deg); /* Safari */
+  transform: rotate(-30deg);
+  margin-bottom: 50px;
+}
+
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translatez(0);
+}
+
+#reload {
+  z-index: 999;
+  position: absolute;
+  display: none;
+  z-index: 999;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  margin-top: 1.5vw;
+}
+
+#reload span {
+  font-size: 46px;
+  font-weight: bold;
+
+  color: #fff;
+}
+
+#reload a:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  color: #fff;
+}
+
+.ink {
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: scale(0);
+}
+
+.ink {
+  background: #fff;
+  opacity: 1;
+}
+
+.ink.animate {
+  -webkit-animation: ripple-effect 1.6s ease; /*
+  -o-animation: ripple-effect 0.5s linear;
+  animation: ripple-effect 0.5s linear;*/
+}
+
+@keyframes ripple-effect {
+  100% {
+    opacity: 100;
+    -webkit-transform: scale(50);
+
+    /*
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);*/
+  }
+}
+
+/*
+@-webkit-keyframes ripple-effect {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+@-moz-keyframes ripple-effect {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+@-ms-keyframes ripple-effect {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+@-o-keyframes ripple-effect {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+*/
+.fb-like {
+  z-index: 999;
+}
+
+/* Second screen */
+
+.thinking {
+  background: white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: none;
+}
+
+.t-text {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  z-index: 200;
+  animation: blink 1.5s linear infinite;
+  display: none;
+  color: #212121;
+  font-size: 42px;
+  font-size: 7vw;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* Loader 2 */
+.loader-2 {
+  display: none;
+  height: 64px;
+  width: 64px;
+  z-index: 200;
+  -webkit-animation: loader-2-1 3s linear infinite;
+  animation: loader-2-1 3s linear infinite;
+}
+@-webkit-keyframes loader-2-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes loader-2-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader-2 span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 64px;
+  width: 64px;
+  clip: rect(32px, 64px, 64px, 0);
+  -webkit-animation: loader-2-2 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  animation: loader-2-2 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+@-webkit-keyframes loader-2-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes loader-2-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader-2 span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 64px;
+  width: 64px;
+  border: 3px solid transparent;
+  border-top: 3px solid #212121;
+  border-radius: 50%;
+  -webkit-animation: loader-2-3 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  animation: loader-2-3 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+@-webkit-keyframes loader-2-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes loader-2-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader-2 span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 64px;
+  width: 64px;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.center {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* Screen 3 */
+
+.nou {
+  text-align: center;
+  right: 0;
+  top: 0;
+  position: absolute;
+  z-index: 300;
+  background-color: #007a7a;
+  height: 100%;
+  width: 0;
+  -webkit-animation: slide100 1.5s ease;
+  -o-animation: slide100 1.5s ease;
+  animation: slide100 1.5s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.yea {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 300;
+  background-color: #fea02f;
+  height: 100%;
+  width: 0;
+  -webkit-animation: slide100 1.5s ease;
+  -o-animation: slide100 1.5s ease;
+  animation: slide100 1.5s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.draw1 {
+  text-align: center;
+  right: 0;
+  top: 0;
+  position: absolute;
+  z-index: 300;
+  background-color: #007a7a;
+  height: 100%;
+  width: 0;
+  -webkit-animation: slide50 1.5s ease;
+  -o-animation: slide50 1.5s ease;
+  animation: slide50 1.5s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.draw2 {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 300;
+  background-color: #fea02f;
+  height: 100%;
+  width: 0;
+  -webkit-animation: slide50 1.5s ease;
+  -o-animation: slide50 1.5s ease;
+  animation: slide50 1.5s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes slide50 {
+  100% {
+    opacity: 100;
+    width: 50%;
+
+    /*
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);*/
+  }
+}
+
+@keyframes slide100 {
+  100% {
+    opacity: 100;
+    width: 100%;
+
+    /*
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);*/
+  }
+}
+
+.answeryes {
+  display: none;
+  text-align: center;
+  font-size: 42px;
+  font-size: 10vw;
+  color: #fff;
+  z-index: 999;
+  position: relative;
+  margin: auto;
+}
+
+.answerno {
+  display: none;
+  text-align: center;
+  font-size: 42px;
+  font-size: 10vw;
+  color: #fff;
+  z-index: 999;
+  position: relative;
+  margin: auto;
+}
+
+.answer50 {
+  display: none;
+  text-align: center;
+  font-size: 42px;
+  font-size: 10vw;
+  color: #fff;
+  z-index: 999;
+  position: relative;
+  margin: auto;
+}
+
+.half {
+  width: 50% !important;
+}
+
+.description {
+  font-family: "Josefin Sans", sans-serif;
+  display: none;
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 24px;
+  font-size: 1.8vw;
+  color: #fff;
+  z-index: 999;
+  position: relative;
+  margin: auto;
+  margin-top: 20px;
+}
+
+@keyframes slidea {
+  100% {
+    opacity: 100;
+    width: 100%;
+
+    /*
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);*/
+  }
+}

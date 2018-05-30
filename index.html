@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Obsessive Flip</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.5/jquery.pagepiling.min.css" />
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Monoton" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div id="pagepiling">
+      <div class="section">
+
+        <div id="lefthalft" class="lefthalf"></div>
+        <div class="yes">YES</div>
+        <div class="no">NO</div>
+
+
+        <div id="circle">
+          <p id="c-text"></p>
+        </div>
+
+        <div class="thinking"></div>
+        <h1 class='t-text'>flipping for <span id="flipcount"></span>times</h1>
+
+        <h1 class='answeryes'>YES</h1>
+        <h1 class='answerno'>NO</h1>
+        <h1 class='answer50'>50 - 50</h1>
+        <h2 class="description">
+          <span id="times"></span> times out of <span id="d-count"></span></h2>
+
+        <div id="reload">
+          <a href="javascript:history.go(0)"><span>&#x21bb;</span></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="credit">
+      <p>Obsessive flip - Crafted by Huseyn A. 2018</p>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.5/jquery.pagepiling.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+</html>
