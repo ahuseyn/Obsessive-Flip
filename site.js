@@ -12,26 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-self.addEventListener('install', function(e) {
-  e.waitUntil(
-    caches.open('your-magic-cache').then(function(cache) {
-      return cache.addAll([
-        '/',
-        '/index.html',
-        '/manifest.json',
-        '/site.js',
-		'/script.js',
-        '/dragon.js',
-        '/style.css',
-      ]);
-    })
-  );
-});
-
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
-    })
-  );
+navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
+  console.log('Excellent, registered with scope: ', registration.scope);
 });
