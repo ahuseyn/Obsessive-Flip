@@ -107,7 +107,6 @@ body {
 }
 
 #reload span {
-  font-size: 46px;
   font-weight: bold;
 
   color: #fff;
@@ -431,10 +430,13 @@ body {
   }
 }
 
+
+
+
+
 .answeryes {
   display: none;
   text-align: center;
-  font-size: 190px;
   color: #fff;
   z-index: 999;
   position: relative;
@@ -444,7 +446,6 @@ body {
 .answerno {
   display: none;
   text-align: center;
-  font-size: 190px;
   color: #fff;
   z-index: 999;
   position: relative;
@@ -454,12 +455,33 @@ body {
 .answer50 {
   display: none;
   text-align: center;
-  font-size: 190px;
   color: #fff;
   z-index: 999;
   position: relative;
   margin: auto;
 }
+
+@media (max-width: @screen-xs-max) {
+
+.answeryes, .answerno, .answer50 {
+  font-size: 80px;
+}
+
+#reload span {
+  font-size: 36px;
+}}
+
+
+@media (min-width: @screen-sm-min) {
+
+.answeryes, .answerno, .answer50 {
+  font-size: 190px;
+}
+
+#reload span {
+  font-size: 42px;
+}}
+
 
 .half {
   width: 50% !important;
