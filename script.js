@@ -5,12 +5,7 @@ $(document).ready(function() {
     sectionsColor: ["#007a7a"],
     navigation: []
   });
-
-  /** An empty service worker! */
-  self.addEventListener('fetch', function(event) {
-    /** An empty fetch handler! */
-  });
-
+  
   var i;
   var flip = 0,
     timeOut = 0,
@@ -101,4 +96,8 @@ $(document).ready(function() {
       head = 0;
       tail = 0;
     });
+});
+
+  navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
+  console.log('Excellent, registered with scope: ', registration.scope);
 });
