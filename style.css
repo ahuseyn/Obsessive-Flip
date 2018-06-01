@@ -461,7 +461,7 @@ body {
   margin: auto;
 }
 
-@media (max-width: @screen-xs-max) {
+@media only screen and (max-width: 768px) {
 
 .answeryes, .answerno, .answer50 {
   font-size: 80px;
@@ -471,8 +471,11 @@ body {
   font-size: 36px;
 }}
 
+.description {
+  font-size: 18px;
+}
 
-@media (min-width: @screen-sm-min) {
+@media only screen and (min-width: 768px) {
 
 .answeryes, .answerno, .answer50 {
   font-size: 190px;
@@ -480,6 +483,10 @@ body {
 
 #reload span {
   font-size: 42px;
+}
+
+.description {
+  font-size: 18px;
 }}
 
 
@@ -492,7 +499,6 @@ body {
   display: none;
   text-align: center;
   font-weight: bold;
-  font-size: 34px;
   color: #fff;
   z-index: 999;
   position: relative;
